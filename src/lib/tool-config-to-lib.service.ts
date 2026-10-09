@@ -1,12 +1,12 @@
 import { Inject, Injectable } from '@angular/core';
-import { LIB_CONFIG, LibConfig } from './config.token';
+import { LIB_CONFIG, IConfigToLib } from './config.token';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ToolConfigToLibService {
 
-  constructor(@Inject(LIB_CONFIG) private cfg: LibConfig) {};
+  constructor(@Inject(LIB_CONFIG) private cfg: IConfigToLib) {};
 
   public doSomething() {
     this.cfg.log('called');
